@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 5px;
+
+}
+
+.form1 {
+
+    height: 30%;
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input:required:valid {
+    border: 3px solid #01f72e;
+
+    background-image: url(./imagens/successo-icon.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+img {
+    position: relative;
+    display: flex;
+    height: 20px;
+    width: 17px;
+}
+
+select:invalid{
+    border: 4px red solid;
+}
+
+input:invalid {
+    border: 3px solid #DB5A5A;
+    background-image: url(./imagens/error-icon.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+input:focus{
+    border: 3px solid black !important;
+}
+
+.mb1 i {
+
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+label {
+    margin-left: 30PX;
+}
+
+
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(225, 225, 225);
+    padding-top: 10px;
+
+}
+
+.mb1 {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+.modalcontainer {
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+
+}
+
+
+.modal {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 96%;
+    padding-left: 20px;
+}
+
+.alerta {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(239, 47, 4);
+    height: 7%;
+    width: 100%;
+}
+
+.esconde {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 320ms;
+
+}
+
+#confirma {
+    margin-right: 15px;
+    padding: 5px;
+}
+
+#confirma:hover {
+    background-color: rgb(14, 235, 10);
+
+}
+
+
+#confirma2:hover {
+    background-color: rgb(14, 235, 10);
+}
+
+
+#confirma2 {
+    margin-right: 15px;
+    padding: 5px;
+}
+
+#sair2:hover {
+    background-color: rgb(255, 4, 4);
+}
+
+
+#sair2 {
+    margin-right: 15px;
+    padding: 5px;
+}
+
+#botao {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.sair {
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    height: 10%;
+    width: 96%;
+    padding-left: 20px;
+
+}
+
+.moldura {
+    flex-direction: column;
+    background-color: rgb(66, 66, 64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    z-index: 1;
+}
+
+
+/* retirar setas dos campos tipo numb */
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+}

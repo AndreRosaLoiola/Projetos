@@ -1,0 +1,65 @@
+﻿@model ContatoModel
+<h1>Editar</h1>
+
+
+
+
+<form class="row" asp-controller="Contato" asp-action="Alterar" method="post">
+   <input type="hidden" asp-for="Id" />
+    
+    <div class="row">
+        <div class="col-md-4">
+            <label for="Nome" class="form-label">Nome</label>
+            <input type="text" asp-for="Nome" class="form-control" id="inputnome">
+        </div>
+        <div class="col-md-4">
+            <label for="RG" class="form-label">RG</label>
+            <input type="text" asp-for="Rg" class="form-control" id="inputrg">
+        </div>
+        <div class="col-md-4">
+            <label for="CPF" class="form-label">CPF</label>
+            <input type="text" asp-for="Cpf" class="form-control" id="inputcpf" placeholder="000.000.000-00">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="E-mail" class="form-label">E-mail</label>
+            <input type="text" asp-for="Email" class="form-control" id="inputemail" placeholder="email@email.com">
+        </div>
+        <div class="col-md-4">
+            <label for="Celular" class="form-label">Celular</label>
+            <input type="text" asp-for="Celular" class="form-control" id="inputcelular" placeholder="(00)00000-0000">
+        </div>
+        <div class="col-md-4">
+            <label for="Cep" class="form-label">Cep</label>
+            <input type="text" asp-for="Cep" class="form-control" id="inputcep">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="Cidade" class="form-label">Cidade</label>
+            <input type="text" asp-for="Cidade" class="form-control" id="inputcidade">
+        </div>
+        <div class="col-md-4">
+            <label for="Sexo" class="form-label">Sexo</label>
+            <select id="inputSexo" asp-for="Sexo" class="form-control">
+                <option selected>Sexo</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="Data Nascimento" class="form-label">Data Nascimento</label>
+            <input type="date" asp-for="Data" class="form-control">
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <br />
+        <button type="submit" class="btn btn-primary" class="bg-light border">Confirmar</button>
+        <a role="button" class="btn btn-danger" asp-route-id="" asp-controller="Contato" asp-action="Index"> Cancelar</a>
+    </div>
+
+
+
+</form>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>formulario</title>
+
+
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+
+  <div class="conteiner">
+
+    <form class="form1" name="form1" method="post" id="form1">
+      <h3>Dados de login</h3>
+      <div class="alerta" id="alerta">
+
+      </div>
+      <div class="mb1">
+        <label for="cpf"> <b> CPF</b> <br> <input type="text" maxlength="14" minlength="14" name="cpf" id="cpf"
+            class="cpf" required />
+
+        </label>
+        <label for="email"> <b> E-mail</b> <br><input type="email" id="email" required>
+
+        </label>
+        <label for="confirmaemail"><b>Confirmar </b> <br><input type="email" id="confirmaemail" required>
+
+        </label>
+        <label for="senha"> <b> Senha</b> <br>
+          <input type="password" id="senha" required>
+
+          <img src="/imagens/olhoaberto.png" onclick="abreolho()" id="olho" alt="">
+
+        </label>
+        <label for="senha2"><b>Confirmar </b><br>
+          <input type="password" id="senha2" required>
+
+
+      </div>
+
+      <h3>Dados de contato</h3>
+      <div class="mb1">
+
+      </div>
+
+      <div class="mb1">
+        <label><b>Nome</b> <br><input class="x" type="text" name="nome" minlength="2" id="nome" required>
+
+
+
+        </label>
+        <label><b>Sobrenome</b> <br><input type="text" name="sobrenome" id="sobrenome" required>
+
+
+
+        </label>
+      </div>
+      <div class="mb1">
+        <label><b> Data Nascimento</b> <br><input type="date" name="nascimento" id="nascimento">
+
+
+        </label>
+        <label><b>RG</b> <br><input type="number" maxlength="11" name="rg" id="rg" required>
+
+
+        </label>
+        <label><b>Sexo</b> <br><select name="sexo" id="sexo">
+            <option selected disabled value="">selecione</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select></label>
+
+      </div>
+
+      <div class="mb1">
+        <option><b></b></option>
+        <label> <b> CEP </b><br><input type="number" maxlength="11" required name="cep" id="cep" value="" size="10"
+            maxlength="9" onblur="pesquisacep(this.value);" />
+
+
+        </label>
+        <label> <b> Endereço </b> <br><input type="text" name="rua" id="rua"> </label>
+        <label> <b> Nª </b> <br><input type="number" name="numero" id="numero" required>
+
+        </label>
+      </div>
+      <div class="mb1">
+        <label><b> Bairro</b> <br><input type="text" name="bairro" id="bairro"> </label>
+        <label> <b>Complemento</b> <br><input type="text" name="complemento" id="complemento"> </label>
+        <label> <b> Cidade</b> <br><input type="text" name="cidade" id="cidade"> </label>
+      </div>
+      <div class="mb1">
+        <label> <b>Estado</b> <br>
+          <select name="uf" id="uf"  onclick="selectestado()" required>
+            
+          </select></label>
+        <label><b>DDD+Telefone</b> <br><input type="number" maxlength="12" name="telefone" id="telefone"></label>
+        <label><b>DDD+Celular</b> <br><input type="number" maxlength="12" name="celular" id="celular" required>
+
+        </label>
+      </div>
+      <div id="botao"><input id="confirma" type="submit" value="Confirmar" onclick="verificarerro()"> </div>
+    </form>
+
+
+  </div>
+
+  <div id="modalcontainer" class="modalcontainer" onblur="xxx()">
+    <div class="moldura">
+      <div class="modal" id="modal">
+
+
+        <span id="cpf2"></span>
+        <br>
+        <span id="nome2"></span>
+        <br>
+        <span id="sobrenome2"></span>
+        <br>
+        <span id="email2"></span>
+        <br>
+        <span id="datanascimento2"></span>
+        <br>
+        <span id="rg2"></span>
+        <br>
+        <span id="sexo2"></span>
+        <br>
+        <span id="cep2"></span>
+        <br>
+        <span id="endereco2"></span>
+        <br>
+        <span id="numero2"></span>
+        <br>
+        <span id="bairro2"></span>
+        <br>
+        <span id="complemento2"></span>
+        <br>
+        <span id="cidade2"></span>
+        <br>
+        <span id="uf2"></span>
+        <br>
+        <span id="celular2"></span>
+
+      </div>
+      <div id="sair" class="sair">
+
+        <input type="button" value="Confirma" id="confirma2">
+        <input type="button" value="sair" id="sair2">
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <script src="motor.js"></script>
+</body>
+
+</html>

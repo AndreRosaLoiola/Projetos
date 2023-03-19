@@ -1,0 +1,68 @@
+﻿@model List<ContatoModel>
+
+
+
+<a type="button" class="btn btn-primary" asp-controller="Contato" asp-action="Adicionar">Adicionar  </a>
+<div id="topindex">
+    
+</div>
+
+@if(TempData["MensagemSucesso"]!=null){
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<table class="table" id="tabelacontato">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">RG</th>
+            <th scope="col">CPF</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Celular</th>
+            <th scope="col">CEP</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Data</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any()){
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Nome</th>
+                    <td>@item.Rg</td>
+                    <td>@item.Cpf</td>
+                    <td>@item.Email</td>
+                    <td>@item.Celular</td>
+                    <td>@item.Cep</td>
+                    <td>@item.Cidade</td>
+                    <td>@item.Sexo</td>
+                    <td>@item.Data</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-primary" asp-route-id="@item.Id" asp-controller="Contato" asp-action="Editar">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-route-id="@item.Id" asp-controller="Contato" asp-action="ConfirmarExclusao"> Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+
+            }
+        }
+
+       
+    </tbody>
+</table>

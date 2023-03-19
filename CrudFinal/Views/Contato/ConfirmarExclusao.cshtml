@@ -1,0 +1,6 @@
+﻿@model ContatoModel
+
+<h3>Tem certeza que deseja excluir @Model.Nome </h3>
+
+<a role="button" class="btn btn-danger" asp-route-id="@Model.Id" asp-controller="Contato" asp-action="Apagar">Apagar</a>
+<a role="button" class="btn btn-primary"  asp-controller="Contato" asp-action="Index"> Cancelar</a>
